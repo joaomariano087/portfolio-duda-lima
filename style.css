@@ -1,0 +1,185 @@
+:root {
+  --bg: #f9f6f3;
+  --primary: #b88c7d;
+  --text: #3b3b3b;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+section,
+header,
+footer {
+  padding: 4rem 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(249,246,243,.85), rgba(249,246,243,.85)),
+    url("./images/hero.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+}
+
+.btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ================= CARDS ================= */
+.cards {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+/* ================= SOBRE ================= */
+.sobre-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sobre-img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* ================= SERVIÇOS ================= */
+.servicos ul {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.servicos li {
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ================= PACOTES ================= */
+.pacote-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.pacote-detalhes {
+  display: none;
+  margin-top: 1rem;
+}
+
+.pagamento {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* ================= CONTATO ================= */
+.contato {
+  background: #efe7e2;
+  text-align: center;
+}
+
+.contato a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .sobre-content {
+    grid-template-columns: 1fr;
+  }
+
+  section,
+  header,
+  footer {
+    padding: 3.5rem 1.5rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  section,
+  header,
+  footer {
+    padding: 3rem 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .sobre-content {
+    text-align: center;
+  }
+
+  .pacote-btn {
+    font-size: 1.05rem;
+  }
+}
