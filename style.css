@@ -78,9 +78,15 @@ h2 {
   background: var(--white);
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
 /* ================= SOBRE ================= */
 .sobre-content {
   max-width: 1000px;
@@ -120,6 +126,7 @@ h2 {
   text-align: left;
   cursor: pointer;
   color: var(--text);
+  transform: translateY(-12px);
 }
 
 .pacote-detalhes {
